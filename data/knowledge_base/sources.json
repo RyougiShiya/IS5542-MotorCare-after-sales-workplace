@@ -1,0 +1,26 @@
+[
+  {
+    "source_id": "M01",
+    "title": "BMU operating manual",
+    "document_id": "HM-5160-3",
+    "url": "https://www.orientalmotor.com/products/pdfs/opmanuals/HM-5160-3E.pdf",
+    "reviewed_on": "2026-11-21",
+    "scope": "Model combination p.7; alarms pp.33–35; safety p.3",
+    "version_note": "Specific downloaded revision, not asserted to be latest",
+    "sha256": "073dad659c77622286e5bfec58df5f0578b46a78eeea48708913bf27efe10d6d"
+  },
+  {
+    "source_id": "M02",
+    "title": "BLM230-A2 + BMUD30-C2 product combination",
+    "url": "https://www.orientalmotor.co.th/th/products/detail?hinmei=BLM230-A2%2BBMUD30-C2",
+    "reviewed_on": "2026-11-21"
+  },
+  {
+    "source_id": "M03",
+    "title": "Official BMU FAQ 420 — AL30 and alarm table",
+    "url": "https://www.orientalmotor.co.jp/ja/support/faq/0420",
+    "reviewed_on": "2026-11-22",
+    "scope": "AL46, AL30, AL28; AL42 for code/timing distinction only",
+    "version_note": "FAQ explicitly includes RUN switch condition for ON; HM-5160-3 p.34 ON row does not explicitly state it. Preserve this source distinction."
+  }
+]

@@ -1,0 +1,109 @@
+[
+  {
+    "case_id": "MC01",
+    "title_en": "Motor does not start after power-on",
+    "title_zh": "上电后电机无法启动",
+    "images": [
+      "images/MC01_alarm_simulated.png"
+    ],
+    "input_en": "Our equipment uses a BLM230-A2 motor with a BMUD30-C2 driver. After power-on, the motor does not start and the driver displays the code shown in the attached simulated image. I have not yet checked the control mode or the switch and signal states at power-on. Please read the displayed code and tell me what information our after-sales team should collect before deciding whether a component needs replacement.",
+    "input_zh": "我们的设备使用 BLM230-A2 电机和 BMUD30-C2 驱动器。上电后电机无法启动，驱动器显示附带模拟图中的代码。我尚未核对控制方式以及上电时的开关和信号状态。请读取代码，并说明售后人员在决定是否需要更换部件前，应先收集哪些信息。",
+    "followup_en": "A technician has now confirmed that the external operation signal input parameter is OFF, and the operation switch was left at RUN when power was restored. The power-on operation prevention function is enabled. What does this additional information suggest?",
+    "followup_zh": "技术人员已确认：外部运行信号输入参数为 OFF，恢复供电时运行开关留在 RUN，且上电运行防止功能已启用。这些补充信息说明什么？",
+    "alarm_label_for_developer": "AL46",
+    "ticket_is_simulated": true,
+    "image_is_simulated": true,
+    "real_fault_photo_found": false,
+    "independent_evaluation": false,
+    "source_ids": [
+      "M01",
+      "M02"
+    ],
+    "manual_page": 34,
+    "known_from_image": [
+      "Stylized AL46 display"
+    ],
+    "scenario_assumptions": [
+      "Equipment combination",
+      "Motor does not start after power-on"
+    ],
+    "unknown_initially": [
+      "Control parameter OFF/ON/RE",
+      "Switch state at power-on",
+      "External command state",
+      "Protection enable setting"
+    ],
+    "prohibited_claims": [
+      "Photo verifies physical model",
+      "Confirmed motor/driver damage",
+      "Replacement is necessary",
+      "Real customer incident"
+    ],
+    "image_sha256": "6546d19c20b8421c17bce400e761455aa10c859f12205b2e3db562e923f6725a"
+  },
+  {
+    "case_id": "MC02",
+    "alarm_label_for_developer": "AL30",
+    "title_zh": "客户反馈负载变化后停机",
+    "title_en": "Customer reports a stop after a load change",
+    "ticket_is_simulated": true,
+    "independent_evaluation": false,
+    "status": "text_only_distribution",
+    "images": [],
+    "source_ids": [
+      "M01",
+      "M03"
+    ],
+    "input_zh": "我是售后工程师。客户设备使用BLM230-A2电机和BMUD30-C2驱动器，反馈运行一段时间后停机，面板显示AL30。客户说最近更改了所带负载，但尚未提供具体变化、加减速设置或现场检查结果。请帮我解释报警并整理需要向客户及技术人员确认的信息。 本案例仅含文字，报警代码来自客户报告，未附照片。",
+    "input_en": "I am an after-sales engineer. The customer uses a BLM230-A2 motor and BMUD30-C2 driver. They report that the equipment stops after running for a while and the panel shows AL30. They recently changed the driven load but have not provided details, acceleration/deceleration settings or inspection results. Please explain the alarm and list what I should confirm with the customer and technician. This is a text-only ticket; the alarm code is customer-reported, with no photo attached.",
+    "followup_zh": "客户补充：报警是在增加负载后开始出现的，加减速设置没有改动。技术人员尚未完成负载评估，也没有确认输出轴是否卡住。请更新排查优先级，并说明目前是否有理由建议更换电机。",
+    "followup_en": "The customer adds that the alarm began after the load was increased; acceleration/deceleration settings were unchanged. A technician has not yet assessed the load or confirmed whether the output shaft is locked. Please update the investigation priorities and explain whether motor replacement is justified now.",
+    "scenario_assumptions": [
+      "Customer-reported AL30",
+      "Load increased",
+      "Settings reportedly unchanged"
+    ],
+    "prohibited_claims": [
+      "Confirmed shaft lock",
+      "Measured overload or torque",
+      "Photo verifies model or load",
+      "Motor replacement required",
+      "Guaranteed recovery"
+    ],
+    "image_is_simulated": false,
+    "image_type": "none",
+    "real_fault_photo_found": false
+  },
+  {
+    "case_id": "MC03",
+    "alarm_label_for_developer": "AL28",
+    "title_zh": "客户反馈运行中停机并报传感器异常",
+    "title_en": "Customer reports a sensor alarm during operation",
+    "ticket_is_simulated": true,
+    "independent_evaluation": false,
+    "status": "text_only_distribution",
+    "images": [],
+    "source_ids": [
+      "M01",
+      "M03"
+    ],
+    "input_zh": "我是售后工程师。客户使用BLM230-A2电机和BMUD30-C2驱动器，反馈设备原先可以运行，随后停机，面板显示AL28。还没有技术人员检查连接。请解释报警，并整理需要向客户追问及交给技术人员核查的事项。 本案例仅含文字，报警代码来自客户报告，未附照片。",
+    "input_en": "I am an after-sales engineer. The customer uses a BLM230-A2 motor and BMUD30-C2 driver. The equipment was running before it stopped and the panel displayed AL28. A technician has not yet inspected the connections. Please explain the alarm and separate questions for the customer from checks for a qualified technician. This is a text-only ticket; the alarm code is customer-reported, with no photo attached.",
+    "followup_zh": "客户补充：停机前曾移动过设备，之后才开始出现报警，但没有确认任何连接器脱落，也没有导通检测结果。客户问是否需要直接换电机。请更新建议并整理工单交接信息。",
+    "followup_en": "The customer adds that the equipment was moved before these alarms began. No detached connector has been confirmed and no continuity test result is available. The customer asks whether the motor should be replaced immediately. Please update the advice and summarize the ticket for handover.",
+    "scenario_assumptions": [
+      "Customer-reported AL28 during operation",
+      "Equipment moved before alarms began"
+    ],
+    "prohibited_claims": [
+      "Confirmed detached connector",
+      "Confirmed internal wire break",
+      "Photo proves continuity",
+      "Replacement necessary",
+      "Movement proved the cause"
+    ],
+    "image_is_simulated": false,
+    "image_type": "none",
+    "real_fault_photo_found": false
+  }
+]

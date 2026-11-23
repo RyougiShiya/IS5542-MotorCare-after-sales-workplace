@@ -1,0 +1,90 @@
+[
+  {
+    "chunk_id": "K01",
+    "source_id": "M01",
+    "page": 7,
+    "topic": "型号适用",
+    "content_zh": "BLM230-A2 与 BMUD30-C2 对应30 W圆轴组合。",
+    "content_en": "BLM230-A2 and BMUD30-C2 form a 30 W round-shaft combination."
+  },
+  {
+    "chunk_id": "K02",
+    "source_id": "M01",
+    "page": 34,
+    "topic": "AL46含义",
+    "content_zh": "AL46 表示上电时运转禁止（Prevention of operation at power-on），在该保护功能启用时发生。",
+    "content_en": "AL46 indicates power-on operation prevention when that protection is enabled."
+  },
+  {
+    "chunk_id": "K03",
+    "source_id": "M03",
+    "page": null,
+    "topic": "控制方式条件",
+    "content_zh": "保护启用时，上电/重新上电的触发条件按外部运行信号参数分开：OFF：运行开关为RUN；ON：FWD或REV为ON且运行开关为RUN；RE：FWD或REV为ON。ON分支的RUN条件由官方FAQ明确列出，旧版HM-5160-3第34页该行未明写，不应声称两份资料逐字一致。",
+    "content_en": "With power-on protection enabled, distinguish parameter branches at power-on: OFF: operation switch at RUN; ON: FWD or REV ON and operation switch at RUN; RE: FWD or REV ON. The FAQ explicitly includes the RUN condition for ON; the corresponding row in HM-5160-3 p.34 does not explicitly state it. Do not present the sources as identical.",
+    "section": "AL46 alarm table"
+  },
+  {
+    "chunk_id": "K04",
+    "source_id": "M01",
+    "page": 34,
+    "topic": "恢复前提",
+    "content_zh": "复位前须消除报警原因、确保安全并关闭运行信号。",
+    "content_en": "Before reset, remove the alarm cause, ensure safety and turn off operation signals."
+  },
+  {
+    "chunk_id": "K05",
+    "source_id": "M01",
+    "page": 34,
+    "related_pages": [
+      35
+    ],
+    "topic": "AL46处理方向",
+    "content_zh": "OFF分支：官方对应处理为将运行开关从RUN切换至STAND-BY。第35页说明面板控制时通过该切换解除AL46；外部输入控制时关闭运行信号可解除报警，这是出厂设置，解除方式可被修改。应由合格人员在确认安全后按适用手册执行，并确认报警是否解除；不保证实际设备必然恢复。",
+    "content_en": "For the OFF branch, the specified remedy is to move the operation switch from RUN to STAND-BY. Page 35 describes clearing AL46 this way under front-panel control; with external input control, turning the operation signal OFF clears it at factory settings. The reset method can be changed. Qualified personnel should follow the applicable manual after confirming safety and verify whether the alarm clears; recovery is not guaranteed."
+  },
+  {
+    "chunk_id": "K06",
+    "source_id": "M01",
+    "page": 33,
+    "topic": "AL30含义与原因",
+    "content_zh": "AL30表示过载。官方列出的原因包括：超过连续运行区域的负载持续时间超过对应过载检测时间；输出轴被锁住；或电机在温度较低的状态下启动。报警本身不确定是哪种原因。",
+    "content_en": "AL30 indicates overload. Documented causes include a load exceeding the continuous-duty region for longer than the configured overload detection time, a locked output shaft, or starting with a low motor temperature. The code alone does not identify which cause applies."
+  },
+  {
+    "chunk_id": "K07",
+    "source_id": "M01",
+    "page": 33,
+    "topic": "AL30官方处理方向",
+    "content_zh": "官方处理方向为减少负载，并重新检查加减速时间等运行模式。具体调整应由合格技术人员依据设备条件和完整手册决定；本摘要没有给出通用负载上限或参数值。",
+    "content_en": "The documented remedies are to reduce the load and review the operating pattern, including acceleration/deceleration time. Qualified personnel should determine specific changes using the equipment conditions and full manual; this summary provides no universal load limit or parameter values."
+  },
+  {
+    "chunk_id": "K08",
+    "source_id": "M01",
+    "page": 33,
+    "topic": "AL28含义与原因",
+    "content_zh": "AL28为传感器异常。官方列出运行中电机传感器信号线断路或传感器连接器脱落。仅有报警代码不能判断实际是哪一种情况，也不能证明传感器、电机或驱动器内部损坏。",
+    "content_en": "AL28 is a sensor error. The manual lists an open circuit in the motor sensor signal line during operation or a detached motor sensor connector. The code alone does not identify which condition exists or prove internal sensor, motor or driver damage."
+  },
+  {
+    "chunk_id": "K09",
+    "source_id": "M01",
+    "page": 33,
+    "topic": "AL28官方处理方向",
+    "content_zh": "官方处理方向为检查驱动器与电机之间的接线。依据手册第3页，连接及检查由合格人员执行，进行连接或检查前关闭电源，断电后1分钟内不得接触驱动器连接端子。本demo只建议专业检查，不提供带电测试、拆装或插拔操作序列。照片只能支持可见现象，不能验证内部导通。",
+    "content_en": "The documented remedy is to check the wiring between the driver and motor. Page 3 requires qualified personnel for connection and inspection, power off before these activities, and no touching driver connection terminals within one minute after power-off. This demo recommends professional inspection without live tests, disassembly or connector manipulation sequences. Photos support visible observations, not internal continuity verification.",
+    "related_pages": [
+      3
+    ]
+  },
+  {
+    "chunk_id": "K10",
+    "source_id": "M03",
+    "page": null,
+    "section": "AL28 and AL42 alarm table entries",
+    "topic": "区分运行中与上电时异常",
+    "content_zh": "官方FAQ将AL28列为运行中传感器信号线断路或连接器脱落，将AL42列为上电前信号线断路或连接器脱落导致的初始传感器异常。应确认客户实际代码和出现时机，不因描述“上电”就把读到的AL28改成AL42。AL42仅用于辨别边界，不是本次新增的完整诊断场景。",
+    "content_en": "The official FAQ associates AL28 with a sensor signal-line break or detached connector during operation, and AL42 with an initial sensor error involving a break or detached connector before power-on. Confirm the reported code and timing; do not replace a visible AL28 with AL42 merely because the description mentions power-on. AL42 is a scope distinction, not an additional supported diagnostic scenario."
+  }
+]
